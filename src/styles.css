@@ -1,0 +1,230 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* css starts */
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;      
+  overflow: hidden;
+  background-color: #edf0f8;
+}
+
+.row-cards{
+  display: flex;
+  justify-content: space-around;  
+  align-items: center;
+  margin: 100px 0;
+  gap: 4rem;
+}
+
+.col-card{
+  flex-basis:100%;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 7px;
+}
+
+/* col cards */
+
+.header {
+  text-align: center;
+  margin-top: 2%;
+}
+
+/* add task */
+
+.add-task{
+  width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    margin-top: 2%;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* add task form css */
+
+.add-task-form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.add-task-form input {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.add-task-form button {
+  padding: 8px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 5%; 
+  margin-left: 1rem;
+  border-radius: 6px;
+}
+
+.add-task-form button:hover {
+  background-color: #45a049;
+}
+
+
+.add-task-form input{
+  width: 20%;
+}
+.add-task-here {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* mark complete and delete button css */
+
+.mark-complete-button, .delete-button, .update-button{
+  padding: 12px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: auto; 
+  margin-left: 1rem;
+  border-radius: 6px;
+}
+
+.delete-button{
+  background-color: red !important;
+}
+
+
+/* for straight line display */
+.dis-flex, .d-flex {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fill-available;
+    justify-content: space-between;
+    padding: 0.1rem 2rem 0 1rem; 
+    align-items: center;
+}
+
+
+.dis-flex p {
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.d-flex input{
+  padding: 10px;
+}
+
+.card-title, .complete-card-title {
+  padding: 2rem;
+  background: linear-gradient(to right, #db3665, #ff3527);
+  color: white;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-card {
+    height: auto; /* Adjust height as needed for smaller screens */
+  }
+
+  .add-task-here {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .add-task-here div {
+    margin-top: 0.5rem; /* Adjust spacing between elements */
+  }
+
+  .dis-flex p {
+    max-width: none; /* Allow paragraph to take full width on smaller screens */
+    white-space: normal; /* Allow text to wrap */
+    overflow: visible; /* Display overflowing text */
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .add-task-form button,
+  .add-task-form input,
+  .mark-complete-button,
+  .delete-button,
+  .update-button {
+    width: 90%; /* Full width for buttons on smaller screens */
+    margin: 2px;
+    padding: 10px; /* Adjust padding for even smaller buttons */
+    font-size: 13px; /* Adjust font size for even smaller buttons */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .add-task-form button,
+  .add-task-form input,
+  .mark-complete-button,
+  .delete-button,
+  .update-button {
+    width: 80%; /* Full width for buttons on smaller screens */
+    padding: 8px; /* Adjust padding for even smaller buttons */
+    font-size: 12px; /* Adjust font size for even smaller buttons */
+  }
+}
+
+
+@media screen and (min-width: 401px) and (max-width:767px){
+  .container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .col-card {
+    height: auto; /* Adjust height as needed for smaller screens */
+  }
+
+  .add-task-here {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .add-task-here div {
+    margin-top: 0.5rem; /* Adjust spacing between elements */
+  }
+
+  .dis-flex p {
+    max-width: none; /* Allow paragraph to take full width on smaller screens */
+    white-space: normal; /* Allow text to wrap */
+    overflow: visible; /* Display overflowing text */
+  }
+  .add-task-form button,
+  .add-task-form input,
+  .mark-complete-button,
+  .delete-button,
+  .update-button {
+    width: 80%; /* Full width for buttons on smaller screens */
+    margin: 2px;
+    padding: 12px; /* Adjust padding for even smaller buttons */
+    font-size: 12px; /* Adjust font size for even smaller buttons */
+  }
+}
+
