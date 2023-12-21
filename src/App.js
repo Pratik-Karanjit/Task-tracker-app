@@ -154,6 +154,7 @@ const handleUpdateTask = () => {
 
         {/* col-card */}
         <div className='col-card'>
+          {/* completed task div */}
   <div className='complete-card-title'>
     <b>Completed Tasks</b>
   </div>
